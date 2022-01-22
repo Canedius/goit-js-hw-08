@@ -1,8 +1,7 @@
-// Add imports above this line
 import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// Change code below this line
+
 const gallaryEl = document.querySelector('.gallery');
 const create = galleryItems.map(
   ({ preview, original, description }) =>
@@ -11,7 +10,5 @@ const create = galleryItems.map(
 </a>`,
 );
 gallaryEl.insertAdjacentHTML('afterbegin', create.join(''));
-var lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
-});
+var lightbox = new SimpleLightbox('.gallery a', {});
 console.log(galleryItems);
