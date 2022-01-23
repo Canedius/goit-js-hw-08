@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a=document.querySelector("input"),r=document.querySelector("textarea"),o=document.querySelector("form");o.addEventListener("input",(0,e.default)(n,500)),o.addEventListener("submit",u);const l=localStorage.getItem("feedback-form-state"),s=JSON.parse(l);function n(e){const t=a.value,o=r.value;localStorage.setItem("feedback-form-state",JSON.stringify({email:t,message:o}))}function u(e){e.preventDefault();const t=e.currentTarget.elements.email.value,a=e.currentTarget.elements.message.value;if(!a||!t)return alert("Все поля должны быть заполнены!");const r={message:a,email:t};console.log(r),localStorage.removeItem("feedback-form-state"),o.reset()}s&&(a.value=s.email,r.value=s.message);
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/parcel-project-template/03-feedback.03a313eb.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.03a313eb.js.map
